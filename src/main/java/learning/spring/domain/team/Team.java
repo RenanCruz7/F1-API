@@ -17,7 +17,7 @@ import java.util.Date;
 public class Team {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long teamId;
     private String teamName;
     private String carName;
     private String engine;

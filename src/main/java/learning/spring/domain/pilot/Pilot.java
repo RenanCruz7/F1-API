@@ -1,6 +1,7 @@
 package learning.spring.domain.pilot;
 
 import jakarta.persistence.*;
+import learning.spring.domain.team.Team;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,10 @@ public class Pilot {
     private Date birthDate;
     private int licenseNumber;
     private int worldTitle;
+
+    @ManyToOne
+    @JoinColumn(name="teamID")
+    private Team team;
 
 
     public Pilot(CreatePilotDTO data) {
