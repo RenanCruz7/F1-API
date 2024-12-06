@@ -17,6 +17,9 @@ public record CreatePilotDTO(
         int worldTitle,
 
         @NotBlank
-        int licenseNumber
+        int licenseNumber,
+
+        @NotBlank
+        Long teamId
 ) {
 }

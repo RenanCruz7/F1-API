@@ -25,14 +25,15 @@ public class Pilot {
     private int worldTitle;
 
     @ManyToOne
-    @JoinColumn(name="teamID")
+    @JoinColumn(name="team_id")
     private Team team;
 
 
-    public Pilot(CreatePilotDTO data) {
+    public Pilot(CreatePilotDTO data,Team team) {
         this.name = data.name();
         this.birthDate = data.birthDate();
         this.licenseNumber = data.licenseNumber();
         this.worldTitle = data.worldTitle();
+        this.team = team;
     }
 }

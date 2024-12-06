@@ -7,9 +7,9 @@ public record DetailsPilotDTO(
         String name,
         int licenseNumber,
         int worldTitle,
-        Team team
+        Long team_id
 ) {
     public DetailsPilotDTO(Pilot pilot) {
-        this(pilot.getId(), pilot.getName(), pilot.getLicenseNumber(), pilot.getWorldTitle(), pilot.getTeam());
+        this(pilot.getId(), pilot.getName(), pilot.getLicenseNumber(), pilot.getWorldTitle(), pilot.getTeam().getTeamId());
     }
 }
